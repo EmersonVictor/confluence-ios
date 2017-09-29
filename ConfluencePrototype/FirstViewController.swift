@@ -47,7 +47,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
         searchBar.delegate = self
         
         for event in (Manager.sharedInstance.repositorio.eventItems){
-            let eventAnnotation = Event(title: event.eventTitle, id: event.id, locationName: event.locationName,
+            let eventAnnotation = EventAnnotation(title: event.eventTitle, id: event.id, locationName: event.locationName,
                                         coordinate: event.coordinate, image: event.imageTitle)
             mapView.addAnnotation(eventAnnotation)
         }

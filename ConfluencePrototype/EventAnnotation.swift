@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import Contacts
 
-class Event: NSObject, MKAnnotation {
+class EventAnnotation: NSObject, MKAnnotation {
 
     let title: String?
     let id: String

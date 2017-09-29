@@ -21,7 +21,7 @@ class EventUnit: NSObject {
     let imageTitle: String
     var peopleEngaged: Int
     
-    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, coordinate: CLLocationCoordinate2D, imageTitle: String, imageGallery: [String], tags: [String]){
+    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, coordinate: CLLocationCoordinate2D, imageTitle: String){
         self.eventTitle = eventTitle
         self.eventCreator = eventCreator
         self.id = id
