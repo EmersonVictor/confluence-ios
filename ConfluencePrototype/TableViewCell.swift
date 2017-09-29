@@ -10,10 +10,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imgEvent: UIImageView!
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var eventAddress: UILabel!
-    
     var idCell:String = ""
     
     override func awakeFromNib() {

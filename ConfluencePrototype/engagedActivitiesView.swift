@@ -40,10 +40,9 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
         
-        cell.eventTitle.text = engagedActivitiesData[indexPath.row]
-        cell.eventAddress.text = "Longe"
+
         return cell
     }
     

@@ -109,19 +109,19 @@ class SearchActivityViewController: UITableViewController, UISearchBarDelegate, 
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TableViewCell
         
         let activity = listEvents[indexPath.row]
-    
+    /*
         cell.eventTitle.text = activity.eventTitle
         cell.eventAddress.text = activity.locationName
         cell.imgEvent.image = UIImage(named: activity.imageTitle)
         cell.idCell = activity.id
-        
+        */
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! TableViewCell
         
-        idTarget = cell.idCell
+        //idTarget = cell.idCell
     }
     
     //MARK: - Open activity UIScreen

@@ -40,12 +40,7 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TableViewCell
-        
-        
-        
-        cell.eventTitle.text = myEventsData[indexPath.row]
-        cell.eventAddress.text = "Aqui"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event1Cell", for: indexPath)
         
         return cell
     }
