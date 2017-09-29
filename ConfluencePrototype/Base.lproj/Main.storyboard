@@ -258,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-5A-Euz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="4071"/>
+            <point key="canvasLocation" x="286" y="4082"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="UYb-fD-B4v">
@@ -712,10 +712,10 @@
             </objects>
             <point key="canvasLocation" x="285.60000000000002" y="2469.7151424287858"/>
         </scene>
-        <!--Search View-->
+        <!--Search View Controller-->
         <scene sceneID="qUh-MA-kVS">
             <objects>
-                <viewController id="teZ-ok-yKb" customClass="searchView" customModule="ConfluencePrototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="teZ-ok-yKb" customClass="SearchViewController" customModule="ConfluencePrototype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l7y-M2-ybe"/>
                         <viewControllerLayoutGuide type="bottom" id="Wxt-9G-EVw"/>
@@ -783,7 +783,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="teZ-ok-yKb" eventType="touchUpInside" id="hvg-z1-0X4"/>
+                                    <action selector="backButton:" destination="teZ-ok-yKb" eventType="touchUpInside" id="Ddn-pn-Du5"/>
                                     <action selector="myActivitiesDestroy:" destination="aGe-7L-1jF" eventType="touchUpInside" id="Cxm-YJ-36O"/>
                                 </connections>
                             </button>
@@ -791,12 +791,12 @@
                         <color key="backgroundColor" red="0.99196761846542358" green="0.8678743839263916" blue="0.3819044828414917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="pAC-0J-bDy" id="ChO-b0-69t"/>
+                        <outlet property="tableView" destination="pAC-0J-bDy" id="zvS-aK-XBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOY-nt-2I0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338.39999999999998" y="3311.6941529235387"/>
+            <point key="canvasLocation" x="-593" y="3397"/>
         </scene>
         <!--My Activities View-->
         <scene sceneID="J8v-1T-Oa8">
@@ -876,12 +876,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chj-zM-RPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392.80000000000001" y="3313.4932533733136"/>
+            <point key="canvasLocation" x="286" y="3398"/>
         </scene>
         <!--Engaged Activities View-->
         <scene sceneID="ETk-GR-kBz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jz7-AF-TyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VDK-Ce-MOA" customClass="engagedActivitiesView" customModule="ConfluencePrototype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEe-sh-hka"/>
@@ -955,8 +954,9 @@
                         <outlet property="tableContent" destination="KGU-jG-PNp" id="pvu-9h-NY8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jz7-AF-TyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="3313.4932533733136"/>
+            <point key="canvasLocation" x="1202" y="3397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qvw-qc-4ux">
