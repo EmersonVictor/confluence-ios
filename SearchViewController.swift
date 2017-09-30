@@ -16,9 +16,11 @@ enum selectedScope:Int {
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    var listEvents = [EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "dog-1224267_1920.jpg")]
+    //var listEvents = [EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "dog-1224267_1920.jpg")]
     
-    var listFixed = [EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "dog-1224267_1920.jpg")]
+    var listFixed = Manager.sharedInstance.repositorio.sortAllAlphabetically()
+    
+    var listEvents = Manager.sharedInstance.repositorio.sortAllAlphabetically()
     
     var idTarget = ""
 
@@ -31,6 +33,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(listFixed.count)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.preservesSuperviewLayoutMargins = false
@@ -102,11 +105,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchTableViewCell
+        
         let event = listEvents[indexPath.row]
         
         cell.eventName.text = event.eventTitle
         cell.eventAddress.text = event.locationName
-        cell.eventImage.image = UIImage(named: "profile-picture.png")
+        cell.eventImage.image = UIImage(named: event.imageTitle)
         
         return cell
     }
