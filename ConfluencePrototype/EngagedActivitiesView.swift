@@ -85,20 +85,4 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
         print("error::(error)")
     }
 
-    /*
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let event = listEvents[indexPath.row]
-        idTarget = event.id
-        self.performSegue(withIdentifier: "SelectedEventInSearch", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SelectedEventInSearch" {
-            if let destinationVC = segue.destination as? ActivityViewController {
-                destinationVC.idActualEvent = idTarget
-            }
-        }
-    }
- */
 }

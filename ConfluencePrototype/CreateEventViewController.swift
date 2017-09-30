@@ -11,6 +11,11 @@ import MapKit
 
 class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+    @IBAction func destroyer(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventAddress: UITextField!
@@ -58,7 +63,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         
         eventImage.layer.cornerRadius = eventImage.frame.height/2
         eventImage.clipsToBounds = true
-
+    
     }
 
     override func didReceiveMemoryWarning() {
