@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
-class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
+    var locationManager = CLLocationManager()
     @IBOutlet weak var myEventsTable: UITableView!
     
-    let myEventsData = ["Event1", "Event2"]
+    var myEventsData:[EventUnit] = []
     var idTarget = ""
     
     @IBAction func myActivitiesDestroy(_ sender: Any) {
@@ -23,6 +25,14 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        //Change to list of my activities
+        myEventsData = Manager.sharedInstance.usuario.eventCreated.sortAllByDistance(myLocation: locationManager.location!)
+        
         self.myEventsTable.delegate = self
         self.myEventsTable.dataSource = self
         self.myEventsTable.preservesSuperviewLayoutMargins = false
@@ -40,7 +50,13 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "event1Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event1Cell", for: indexPath) as! MyActivitiesTableViewCell
+        
+        let event = myEventsData[indexPath.row]
+        
+        cell.eventName.text = event.eventTitle
+        cell.eventAddress.text = event.locationName
+        cell.eventImage.image = UIImage(named: event.imageTitle)
         
         return cell
     }
@@ -48,22 +64,22 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    /*
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TableViewCell
-        
-        idTarget = cell.idCell
-    }
     
-
-    //MARK: - Open activity UIScreen
+    //MARK: - Location setup
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "OpenActivitySearched" {
-            if let destinationVC = segue.destination as? ThirdViewController {
-                destinationVC.idActualEvent = idTarget
-            }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManager.requestLocation()
         }
     }
-*/
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first{
+            print("location::(location)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error::(error)")
+    }
 }

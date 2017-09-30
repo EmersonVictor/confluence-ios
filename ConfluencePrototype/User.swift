@@ -13,7 +13,7 @@ class User: NSObject {
     var id: String
     var username: String
     var profileImage: String
-    var eventCriados: Repository
+    var eventCreated: Repository
     var eventEngaged: Repository
     var eventDone: Repository
     
@@ -21,7 +21,7 @@ class User: NSObject {
         self.id = id
         self.username = username
         self.profileImage = profileImage
-        eventCriados = Repository()
+        eventCreated = Repository()
         eventEngaged = Repository()
         eventDone = Repository()
         super.init()

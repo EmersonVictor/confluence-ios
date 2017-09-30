@@ -52,8 +52,13 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EngagedTableViewCell
         
+        let event = engagedActivitiesData[indexPath.row]
+        
+        cell.eventName.text = event.eventTitle
+        cell.eventAddress.text = event.locationName
+        cell.eventImage.image = UIImage(named: event.imageTitle)
 
         return cell
     }

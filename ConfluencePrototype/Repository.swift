@@ -85,6 +85,9 @@ class Repository {
     }
     
     func sortAllAlphabetically() -> [EventUnit]{
+        if(eventItems.count <= 1){
+            return eventItems
+        }
         var newList = eventItems
         for slot in (1..<newList.count).reversed(){
             var positionOfMax = 0
@@ -101,6 +104,9 @@ class Repository {
     }
     
     func sortAllByDistance(myLocation:CLLocation) -> [EventUnit]{
+        if(eventItems.count <= 1){
+            return eventItems
+        }
         var newList = eventItems
         for slot in (1..<newList.count).reversed(){
             var positionOfMax = 0
@@ -119,6 +125,9 @@ class Repository {
     }
     
     func sortAlphabetically(list:[EventUnit]) -> [EventUnit]{
+        if(list.count <= 1){
+            return list
+        }
         var newList = list
         for slot in (1..<newList.count).reversed(){
             var positionOfMax = 0
@@ -135,6 +144,9 @@ class Repository {
     }
     
     func sortAllByDate() -> [EventUnit]{
+        if(eventItems.count <= 1){
+            return eventItems
+        }
         var newList = eventItems
         for slot in (1..<newList.count).reversed(){
             var positionOfMax = 0

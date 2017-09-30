@@ -122,7 +122,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.eventName.text = event.eventTitle
         cell.eventAddress.text = event.locationName
         cell.eventImage.image = UIImage(named: event.imageTitle)
-        cell.idCell = event.id
         
         return cell
     }
@@ -145,6 +144,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    //MARK: - Location setup
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse{

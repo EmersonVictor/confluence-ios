@@ -815,7 +815,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="event1Cell" rowHeight="64" id="DbL-32-566" customClass="TableViewCell" customModule="ConfluencePrototype" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="event1Cell" rowHeight="64" id="DbL-32-566" customClass="MyActivitiesTableViewCell" customModule="ConfluencePrototype" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DbL-32-566" id="pIk-29-sXQ">
@@ -846,6 +846,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventAddress" destination="HmO-qc-VdZ" id="EDs-5t-UGe"/>
+                                            <outlet property="eventImage" destination="Oac-Mb-W6E" id="Yjj-vV-whP"/>
+                                            <outlet property="eventName" destination="27u-ac-KsO" id="3sJ-GL-esK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -895,7 +900,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="60" id="rYA-ca-bXf" customClass="TableViewCell" customModule="ConfluencePrototype" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="60" id="rYA-ca-bXf" customClass="EngagedTableViewCell" customModule="ConfluencePrototype" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rYA-ca-bXf" id="3zG-5s-rku">
@@ -926,6 +931,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventAddress" destination="DX2-kF-zul" id="lhj-4p-ayA"/>
+                                            <outlet property="eventImage" destination="efH-J5-Zq1" id="ROh-QU-Cr4"/>
+                                            <outlet property="eventName" destination="fHW-pl-uE7" id="iKb-Yo-QXL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

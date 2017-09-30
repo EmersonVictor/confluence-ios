@@ -50,6 +50,8 @@
 		A4E9CD061F7EF48F00D70DD8 /* tutorial-bg-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF71F7EF48F00D70DD8 /* tutorial-bg-3.png */; };
 		A4E9CD071F7EF48F00D70DD8 /* tutorial-bg-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF81F7EF48F00D70DD8 /* tutorial-bg-4.jpg */; };
 		A4ECC4F31F7FCB5D006A8383 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC4F21F7FCB5D006A8383 /* TabBarController.swift */; };
+		A4ECC4F51F7FECA2006A8383 /* EngagedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC4F41F7FECA2006A8383 /* EngagedTableViewCell.swift */; };
+		A4ECC4F71F7FEE09006A8383 /* MyActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC4F61F7FEE09006A8383 /* MyActivitiesTableViewCell.swift */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		A4E9CCF71F7EF48F00D70DD8 /* tutorial-bg-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorial-bg-3.png"; path = "Assets/tutorial-bg-3.png"; sourceTree = "<group>"; };
 		A4E9CCF81F7EF48F00D70DD8 /* tutorial-bg-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "tutorial-bg-4.jpg"; path = "Assets/tutorial-bg-4.jpg"; sourceTree = "<group>"; };
 		A4ECC4F21F7FCB5D006A8383 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A4ECC4F41F7FECA2006A8383 /* EngagedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngagedTableViewCell.swift; sourceTree = "<group>"; };
+		A4ECC4F61F7FEE09006A8383 /* MyActivitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,11 +202,13 @@
 				A4ECC4F21F7FCB5D006A8383 /* TabBarController.swift */,
 				A4E942DC1F7EB46F004B5F26 /* GoogleService-Info.plist */,
 				A4E9CCE51F7EE57D00D70DD8 /* SearchTableViewCell.swift */,
+				A4ECC4F41F7FECA2006A8383 /* EngagedTableViewCell.swift */,
 				A47F82E21F796397004AC67A /* VCMapView.swift */,
 				A467B6801F7D7C6200B2B969 /* SearchViewController.swift */,
 				A47F82D61F758914004AC67A /* ActivityViewController.swift */,
 				A467B67C1F7D796500B2B969 /* MyActivitiesViewController.swift */,
 				A467B67E1F7D79B100B2B969 /* EngagedActivitiesView.swift */,
+				A4ECC4F61F7FEE09006A8383 /* MyActivitiesTableViewCell.swift */,
 				A4DFA56C1F7054DC0077BF82 /* AppDelegate.swift */,
 				A4DFA56E1F7054DC0077BF82 /* MapViewController.swift */,
 				A4E942DE1F7EC8BA004B5F26 /* LocationSearchTable.swift */,
@@ -604,6 +610,7 @@
 				A47F82E31F796397004AC67A /* VCMapView.swift in Sources */,
 				A467B6631F7C013200B2B969 /* User.swift in Sources */,
 				A4DFA5711F7054DC0077BF82 /* ProfileViewController.swift in Sources */,
+				A4ECC4F71F7FEE09006A8383 /* MyActivitiesTableViewCell.swift in Sources */,
 				A467B6611F7BFCAA00B2B969 /* RegisterViewController.swift in Sources */,
 				A467B67D1F7D796500B2B969 /* MyActivitiesViewController.swift in Sources */,
 				A4DFA56D1F7054DC0077BF82 /* AppDelegate.swift in Sources */,
@@ -616,6 +623,7 @@
 				A4E9CCE61F7EE57D00D70DD8 /* SearchTableViewCell.swift in Sources */,
 				A47F82E71F798033004AC67A /* Repository.swift in Sources */,
 				A467B66B1F7C138A00B2B969 /* Manager.swift in Sources */,
+				A4ECC4F51F7FECA2006A8383 /* EngagedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
