@@ -19,13 +19,13 @@ class EventAnnotation: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
     let image: UIImage
     
-    init(title: String, id: String, locationName: String, coordinate: CLLocationCoordinate2D, image: String){
+    init(title: String, id: String, locationName: String, coordinate: CLLocationCoordinate2D, image: UIImage){
         self.title = title
         self.id = id
         self.locationName = locationName
         //self.timeUntil = timeUntil
         self.coordinate = coordinate
-        self.image = UIImage(named:image)!
+        self.image = image
         super.init()
     }
     

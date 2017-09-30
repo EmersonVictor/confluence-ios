@@ -121,7 +121,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.eventName.text = event.eventTitle
         cell.eventAddress.text = event.locationName
-        cell.eventImage.image = UIImage(named: event.imageTitle)
+        cell.eventImage.image = event.image
         
         return cell
     }

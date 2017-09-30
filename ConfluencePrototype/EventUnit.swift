@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import MapKit
 
 class EventUnit: NSObject {
@@ -18,10 +19,10 @@ class EventUnit: NSObject {
     let motivation: String
     let date: String
     let coordinate: CLLocationCoordinate2D
-    let imageTitle: String
+    let image: UIImage
     var peopleEngaged: Int
     
-    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, date: String, coordinate: CLLocationCoordinate2D, imageTitle: String){
+    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, date: String, coordinate: CLLocationCoordinate2D, image: UIImage){
         self.eventTitle = eventTitle
         self.eventCreator = eventCreator
         self.id = id
@@ -29,7 +30,7 @@ class EventUnit: NSObject {
         self.motivation = motivation
         self.date = date
         self.coordinate = coordinate
-        self.imageTitle = imageTitle
+        self.image = image
         peopleEngaged = 1
         super.init()
     }

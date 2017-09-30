@@ -56,13 +56,28 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         cell.eventName.text = event.eventTitle
         cell.eventAddress.text = event.locationName
-        cell.eventImage.image = UIImage(named: event.imageTitle)
+        cell.eventImage.image = event.image
         
         return cell
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let event = myEventsData[indexPath.row]
+        idTarget = event.id
+        self.performSegue(withIdentifier: "SelectedEventInMyActivity", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectedEventInMyActivity" {
+            if let destinationVC = segue.destination as? ActivityViewController {
+                destinationVC.idActualEvent = idTarget
+            }
+        }
     }
     
     //MARK: - Location setup

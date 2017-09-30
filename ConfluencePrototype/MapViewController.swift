@@ -48,7 +48,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
         
         for event in (Manager.sharedInstance.repositorio.eventItems){
             let eventAnnotation = EventAnnotation(title: event.eventTitle, id: event.id, locationName: event.locationName,
-                                        coordinate: event.coordinate, image: event.imageTitle)
+                                        coordinate: event.coordinate, image: event.image)
             mapView.addAnnotation(eventAnnotation)
         }
         

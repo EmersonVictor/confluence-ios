@@ -41,7 +41,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         }
         
         self.dismiss(animated: true, completion: nil)
-        let alert = UIAlertController(title: "The event image has been changed.", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "The activity image has been changed.", message: "", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -99,6 +99,41 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         self.eventDate.text = strDate
     }
 
+   
+    @IBAction func createEvent(_ sender: Any) {
+        //let image = eventImage.image
+        let name = eventName.text!
+        let motivation = eventMotivation.text!
+        let address = eventAddress.text!
+        let date = eventDate.text!
+        let eventCreator = Manager.sharedInstance.usuario.id
+        let id = Manager.sharedInstance.repositorio.eventItems.count + 1
+        let image = eventImage.image
+        var coordinate = CLLocationCoordinate2D()
+        
+        CLGeocoder().geocodeAddressString(address, completionHandler: {(placemarks, error) in
+            if(error != nil){
+                print("Geocode Failed!")
+            }else{
+                let placemark = placemarks![0]
+                let location = placemark.location
+                coordinate = location!.coordinate
+            }
+        })
+        print(coordinate)
+        
+        let newEvent = EventUnit(eventTitle: name, eventCreator: eventCreator, id: String(id), locationName: address, motivation: motivation, date: date, coordinate: coordinate, image: image!)
+        Manager.sharedInstance.repositorio.registerEvent(event: newEvent)
+        Manager.sharedInstance.usuario.eventCreated.registerEvent(event: newEvent)
+        
+        let alert = UIAlertController(title: "The activity has been created .", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
+    
+ 
     /*
     // MARK: - Navigation
 

@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-5A-Euz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1316" y="4654"/>
+            <point key="canvasLocation" x="-1210" y="4368"/>
         </scene>
         <!--Create Event View Controller-->
         <scene sceneID="UYb-fD-B4v">
@@ -280,6 +280,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" red="0.14452928300000001" green="0.63618171219999997" blue="0.65050631759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createEvent:" destination="UWK-AH-FpV" eventType="touchUpInside" id="BTU-e7-TMa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-a2-diL">
                                 <rect key="frame" x="246" y="123" width="0.0" height="0.0"/>
@@ -559,7 +562,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="create"/>
                                                     <connections>
-                                                        <segue destination="UWK-AH-FpV" kind="presentation" id="65t-ct-Q0i"/>
+                                                        <segue destination="UWK-AH-FpV" kind="presentation" id="ejc-tc-B1w"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-kn-NRc">
@@ -881,6 +884,7 @@
                     </view>
                     <connections>
                         <outlet property="myEventsTable" destination="S0y-H0-bLh" id="6em-Aq-Kbf"/>
+                        <segue destination="9U3-e2-ytq" kind="presentation" identifier="SelectedEventInMyActivity" id="AMK-8d-os8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chj-zM-RPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -966,6 +970,7 @@
                     </view>
                     <connections>
                         <outlet property="tableContent" destination="KGU-jG-PNp" id="pvu-9h-NY8"/>
+                        <segue destination="9U3-e2-ytq" kind="presentation" identifier="SelectedEventInEngaged" id="gIV-Dj-QGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz7-AF-TyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1174,7 +1179,7 @@
         <image name="tutorial-bg-4.jpg" width="480" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U3B-RO-hsx"/>
+        <segue reference="gIV-Dj-QGp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
