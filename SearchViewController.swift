@@ -14,13 +14,11 @@ enum selectedScope:Int {
     case location = 1
 }
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate {
     
-    //var listEvents = [EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "dog-1224267_1920.jpg")]
-    
-    var listFixed = Manager.sharedInstance.repositorio.sortAllAlphabetically()
-    
-    var listEvents = Manager.sharedInstance.repositorio.sortAllAlphabetically()
+    var locationManager = CLLocationManager()
+    var listFixed:[EventUnit] = []
+    var listEvents:[EventUnit] = []
     
     var idTarget = ""
 
@@ -33,7 +31,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(listFixed.count)
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        listFixed = Manager.sharedInstance.repositorio.sortAllByDistance(myLocation: locationManager.location!)
+        listEvents = Manager.sharedInstance.repositorio.sortAllByDistance(myLocation: locationManager.location!)
+ 
+        
+        //listFixed = Manager.sharedInstance.repositorio.sortAllAlphabetically()
+        //listEvents = Manager.sharedInstance.repositorio.sortAllAlphabetically()
+        
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.preservesSuperviewLayoutMargins = false
@@ -134,5 +145,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first{
+            print("location::(location)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error::(error)")
+    }
+    
 
 }

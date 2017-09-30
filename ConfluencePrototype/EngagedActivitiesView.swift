@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
-class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
+    
+    var locationManager = CLLocationManager()
+    
     @IBOutlet weak var tableContent: UITableView!
     
-    let engagedActivitiesData = [""]
+    //Replace by the engaged activity list
+    var engagedActivitiesData:[EventUnit] = []
+    
     var idTarget = ""
     
     @IBAction func destroyView(_ sender: Any) {
@@ -21,7 +26,14 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        engagedActivitiesData = Manager.sharedInstance.repositorio.sortAllByDistance(myLocation: locationManager.location!)
+        
         // Do any additional setup after loading the view.
         self.tableContent.delegate = self
         self.tableContent.dataSource = self
@@ -49,22 +61,39 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-
-/*
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! TableViewCell
-        
-        idTarget = cell.idCell
+    
+    //MARK: - Location setup
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManager.requestLocation()
+        }
     }
     
-    //MARK: - Open activity UIScreen
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first{
+            print("location::(location)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error::(error)")
+    }
+
+    /*
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let event = listEvents[indexPath.row]
+        idTarget = event.id
+        self.performSegue(withIdentifier: "SelectedEventInSearch", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "OpenActivitySearched" {
-            if let destinationVC = segue.destination as? ThirdViewController {
+        if segue.identifier == "SelectedEventInSearch" {
+            if let destinationVC = segue.destination as? ActivityViewController {
                 destinationVC.idActualEvent = idTarget
             }
         }
     }
-*/
+ */
 }
