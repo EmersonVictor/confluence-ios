@@ -107,7 +107,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         let address = eventAddress.text!
         let date = eventDate.text!
         let eventCreator = Manager.sharedInstance.usuario.id
-        let id = Manager.sharedInstance.repositorio.eventItems.count + 1
+        let id = Manager.sharedInstance.repositorio.contador
         let image = eventImage.image
         var coordinate = CLLocationCoordinate2D()
         
@@ -129,7 +129,6 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         let alert = UIAlertController(title: "The activity has been created .", message: "", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-
     }
     
     

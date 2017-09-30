@@ -32,7 +32,7 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
-        engagedActivitiesData = Manager.sharedInstance.repositorio.sortAllByDistance(myLocation: locationManager.location!)
+        engagedActivitiesData = Manager.sharedInstance.usuario.eventEngaged.sortAllByDistance(myLocation: locationManager.location!)
         
         // Do any additional setup after loading the view.
         self.tableContent.delegate = self

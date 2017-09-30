@@ -22,17 +22,16 @@ class ActivityViewController: UIViewController {
     }
     
     @IBAction func engageEvent(_ sender: Any) {
-        if btnEngage.currentTitle == "Engage" {
-            let index = Manager.sharedInstance.repositorio.index(of: event)
-            Manager.sharedInstance.repositorio.eventItems[index!].peopleEngaged += 1
-            Manager.sharedInstance.usuario.eventEngaged.registerEvent(event: self.event)
-            print(Manager.sharedInstance.usuario.eventEngaged.eventItems)
+        if !Manager.sharedInstance.usuario.eventEngaged.eventExists(event.id) {
+            let index = Manager.sharedInstance.repositorio.index(of: event.id)
+            Manager.sharedInstance.repositorio.eventItems[index].peopleEngaged += 1
+            Manager.sharedInstance.usuario.eventEngaged.registerEvent(event: event)
             btnEngage.setTitle("Engaged", for: .normal)
             btnEngage.setTitleColor(UIColor.cyan, for: .normal)
         } else {
-            let index = Manager.sharedInstance.repositorio.index(of: event)
-            Manager.sharedInstance.repositorio.eventItems[index!].peopleEngaged -= 1
-            Manager.sharedInstance.usuario.eventEngaged.remove(event: self.event)
+            let index = Manager.sharedInstance.repositorio.index(of: event.id)
+            Manager.sharedInstance.repositorio.eventItems[index].peopleEngaged -= 1
+            Manager.sharedInstance.usuario.eventEngaged.remove(event: event)
             btnEngage.setTitle("Engage", for: .normal)
             btnEngage.setTitleColor(UIColor.blue, for: .normal)
         }
@@ -42,6 +41,8 @@ class ActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userId = Manager.sharedInstance.usuario.id
 
         if !idActualEvent.isEmpty {
             event = Manager.sharedInstance.repositorio.filterById(id: idActualEvent)!
@@ -53,11 +54,10 @@ class ActivityViewController: UIViewController {
             engagedNumber.text = String(event.peopleEngaged)
         }
         
-        if (Manager.sharedInstance.usuario.id == event.eventCreator){
+        if (userId == event.eventCreator){
+            btnEngage.isEnabled = false
             btnEngage.isHidden = true
-        }
-        
-        if (Manager.sharedInstance.usuario.eventEngaged.eventExists(idActualEvent)){
+        } else if (Manager.sharedInstance.usuario.eventEngaged.eventExists(event.id)){
             btnEngage.setTitle("Engaged", for: .normal)
             btnEngage.setTitleColor(UIColor.cyan, for: .normal)
         }

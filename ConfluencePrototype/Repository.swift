@@ -14,8 +14,10 @@ import CloudKit
 class Repository {
     
     var eventItems = [EventUnit]()
+    var contador = 1
     
     func registerEvent(event: EventUnit){
+        contador += 1
         eventItems.append(event)
     }
     
@@ -28,8 +30,13 @@ class Repository {
         return false
     }
     
-    func index(of event:EventUnit) -> Int? {
-        return eventItems.index(of: event)
+    func index(of id:String) -> Int {
+        for i in 0..<eventItems.count{
+            if(eventItems[i].id == id){
+                return i
+            }
+        }
+        return -1
     }
     
     func getItem(atIndex index: Int) -> EventUnit? {
@@ -45,12 +52,16 @@ class Repository {
     }
     
     func remove(event: EventUnit){
-        let i:Int = self.index(of: event)!
+        let i:Int = self.index(of: event.id)
         eventItems.remove(at: i)
     }
     
+    func removeAt(index: Int){
+        eventItems.remove(at: index)
+    }
+    
     func replace(oldEvent:EventUnit, newEvent: EventUnit){
-        let i:Int = self.index(of: oldEvent)!
+        let i:Int = self.index(of: oldEvent.id)
         eventItems[i] = newEvent
     }
     
