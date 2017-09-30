@@ -111,6 +111,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.eventName.text = event.eventTitle
         cell.eventAddress.text = event.locationName
         cell.eventImage.image = UIImage(named: event.imageTitle)
+        cell.idCell = event.id
         
         return cell
     }
@@ -119,16 +120,19 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 60
     }
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let event = listEvents[indexPath.row]
+        idTarget = event.id
+        self.performSegue(withIdentifier: "SelectedEventInSearch", sender: self)
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectedEventInSearch" {
+            if let destinationVC = segue.destination as? ActivityViewController {
+                destinationVC.idActualEvent = idTarget
+            }
+        }
+    }
 
 }

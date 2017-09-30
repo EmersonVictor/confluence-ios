@@ -31,7 +31,7 @@ class Manager: NSObject{
         repositorio.registerEvent(event: eventFour)
         repositorio.registerEvent(event: eventFive)
         repositorio.registerEvent(event: eventSix)
-        
+                
         super.init()
     }
     

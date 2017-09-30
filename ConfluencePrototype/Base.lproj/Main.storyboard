@@ -762,7 +762,6 @@
                                             <outlet property="eventAddress" destination="pmT-ED-E1O" id="ugw-we-wOK"/>
                                             <outlet property="eventImage" destination="pLP-7S-CKo" id="ybf-m3-ACa"/>
                                             <outlet property="eventName" destination="y1z-Hh-lY0" id="YOy-lf-5YQ"/>
-                                            <segue destination="9U3-e2-ytq" kind="presentation" id="HZc-H6-3ZF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -791,6 +790,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="pAC-0J-bDy" id="zvS-aK-XBb"/>
+                        <segue destination="9U3-e2-ytq" kind="presentation" identifier="SelectedEventInSearch" id="geR-4s-PVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOY-nt-2I0" userLabel="First Responder" sceneMemberID="firstResponder"/>

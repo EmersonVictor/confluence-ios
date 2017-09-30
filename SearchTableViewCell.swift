@@ -14,6 +14,8 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventAddress: UILabel!
     
+    var idCell = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

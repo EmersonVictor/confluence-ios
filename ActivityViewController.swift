@@ -27,13 +27,14 @@ class ActivityViewController: UIViewController {
             btnEngage.setTitleColor(UIColor.cyan, for: .normal)
         }
     }
-    var idActualEvent = "6"
+    var idActualEvent = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var listEvents = Manager.sharedInstance.repositorio.sortAllAlphabetically()
-        var event:EventUnit = Manager.sharedInstance.repositorio.filterById(id: idActualEvent)!
-        if event != nil {
+
+        if !idActualEvent.isEmpty {
+            let event:EventUnit = Manager.sharedInstance.repositorio.filterById(id: idActualEvent)!
+        
             eventName.text = event.eventTitle
             motivation.text = event.motivation
             address.text = event.locationName
