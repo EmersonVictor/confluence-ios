@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ActivityViewController: UIViewController {
 
     @IBOutlet weak var btnEngage: UIButton!
     
@@ -27,12 +27,18 @@ class ThirdViewController: UIViewController {
             btnEngage.setTitleColor(UIColor.cyan, for: .normal)
         }
     }
-    var idActualEvent = ""
+    var idActualEvent = "6"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //var listEvents = Manager.sharedInstance.repositorio.sortAllAlphabetically()
         var event:EventUnit = Manager.sharedInstance.repositorio.filterById(id: idActualEvent)!
-
+        if event != nil {
+            eventName.text = event.eventTitle
+            motivation.text = event.motivation
+            address.text = event.locationName
+            eventPhoto.image = UIImage(named: event.imageTitle)
+        }
         // Do any additional setup after loading the view.
         eventPhoto.layer.cornerRadius = eventPhoto.frame.height/2
         eventPhoto.clipsToBounds = true
@@ -61,7 +67,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var hours: UILabel!
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var creatorName: UILabel!
-    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var address: UILabel!
     @IBOutlet weak var engagedNumber: UILabel!
     
 

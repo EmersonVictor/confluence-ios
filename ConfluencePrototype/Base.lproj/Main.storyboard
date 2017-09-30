@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="-2652" y="2470"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Activity View Controller-->
         <scene sceneID="woW-e6-RyN">
             <objects>
-                <viewController id="9U3-e2-ytq" customClass="ThirdViewController" customModule="ConfluencePrototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9U3-e2-ytq" customClass="ActivityViewController" customModule="ConfluencePrototype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NpI-aR-tox"/>
                         <viewControllerLayoutGuide type="bottom" id="mjQ-kx-WbI"/>
@@ -131,7 +131,8 @@
                                     <color key="titleColor" red="0.14452928300000001" green="0.63618171219999997" blue="0.65050631759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissView:" destination="9U3-e2-ytq" eventType="touchUpInside" id="oC3-AT-WNe"/>
+                                    <action selector="dismissView:" destination="9U3-e2-ytq" eventType="touchUpInside" id="RXF-tN-4Qh"/>
+                                    <action selector="engageEvent:" destination="9U3-e2-ytq" eventType="touchUpInside" id="0MB-fI-f9P"/>
                                     <action selector="myActivitiesDestroy:" destination="aGe-7L-1jF" eventType="touchUpInside" id="Ddi-du-Z8q"/>
                                 </connections>
                             </button>
@@ -244,21 +245,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="adress" destination="Mye-v1-YOS" id="yNY-aO-myl"/>
-                        <outlet property="btnEngage" destination="MVo-yj-y0U" id="D3D-Z8-c6D"/>
+                        <outlet property="address" destination="Mye-v1-YOS" id="g1E-Xz-9VZ"/>
+                        <outlet property="btnEngage" destination="MVo-yj-y0U" id="g1D-Oe-67H"/>
                         <outlet property="creatorName" destination="ioy-T4-ODd" id="VNa-AD-ASx"/>
                         <outlet property="days" destination="XC5-Bs-AgA" id="WVo-Ux-e0Z"/>
                         <outlet property="engagedNumber" destination="L08-qd-PgT" id="3Zd-9A-Ei0"/>
-                        <outlet property="eventName" destination="4rN-Tc-aEF" id="E77-gj-Qo5"/>
-                        <outlet property="eventPhoto" destination="Nm1-mt-0GU" id="Luu-Gg-tVb"/>
+                        <outlet property="eventName" destination="4rN-Tc-aEF" id="gCx-H7-N1w"/>
+                        <outlet property="eventPhoto" destination="Nm1-mt-0GU" id="Rqv-o9-HxA"/>
                         <outlet property="hours" destination="LNU-Gz-Tlf" id="RCN-l3-1v4"/>
                         <outlet property="minutes" destination="XeM-Tx-DkC" id="jj6-Kq-EuA"/>
-                        <outlet property="motivation" destination="5kK-S1-FMX" id="dAE-st-aDX"/>
+                        <outlet property="motivation" destination="5kK-S1-FMX" id="AAH-gl-pmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-5A-Euz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="4082"/>
+            <point key="canvasLocation" x="286" y="4152"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="UYb-fD-B4v">
@@ -555,9 +556,6 @@
                                                     <rect key="frame" x="222" y="96" width="44" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="create"/>
-                                                    <connections>
-                                                        <segue destination="UWK-AH-FpV" kind="presentation" id="aE8-BM-0Fj"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-kn-NRc">
                                                     <rect key="frame" x="102" y="134" width="0.0" height="0.0"/>
@@ -764,6 +762,7 @@
                                             <outlet property="eventAddress" destination="pmT-ED-E1O" id="ugw-we-wOK"/>
                                             <outlet property="eventImage" destination="pLP-7S-CKo" id="ybf-m3-ACa"/>
                                             <outlet property="eventName" destination="y1z-Hh-lY0" id="YOy-lf-5YQ"/>
+                                            <segue destination="9U3-e2-ytq" kind="presentation" id="HZc-H6-3ZF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

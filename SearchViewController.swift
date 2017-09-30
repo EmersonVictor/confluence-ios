@@ -119,8 +119,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 60
     }
     
-    
-    
 
 
     /*
