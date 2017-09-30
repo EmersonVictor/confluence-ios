@@ -19,9 +19,9 @@ class Repository {
         eventItems.append(event)
     }
     
-    func eventExists (_ eventName: String) -> Bool {
+    func eventExists (_ eventId: String) -> Bool {
         for e in eventItems {
-            if e.eventTitle == eventName{
+            if e.id == eventId{
                 return true
             }
         }

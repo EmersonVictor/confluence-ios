@@ -15,7 +15,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
     
     let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
-
+    var id:String = ""
     
     func checkLocationAuthorizationStatus(){
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {

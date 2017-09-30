@@ -52,6 +52,7 @@
                         <outlet property="mapView" destination="OcW-f5-sSv" id="fEN-ER-bC0"/>
                         <outlet property="searchBar" destination="skt-Wd-06S" id="M0o-Hb-YJL"/>
                         <outlet property="searchDisplayController" destination="9vq-PG-uhM" id="BtV-9l-jix"/>
+                        <segue destination="9U3-e2-ytq" kind="presentation" identifier="ShowEventFromMap" id="U3B-RO-hsx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -259,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-5A-Euz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="4152"/>
+            <point key="canvasLocation" x="-1316" y="4654"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="UYb-fD-B4v">
@@ -1159,5 +1160,8 @@
         <image name="tutorial-bg-3.png" width="324" height="576"/>
         <image name="tutorial-bg-4.jpg" width="480" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="U3B-RO-hsx"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -24,7 +24,7 @@ extension FirstViewController: MKMapViewDelegate{
                 view.isEnabled = true
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: -5)
-                let btn = UIButton(type: .contactAdd) as UIView
+                let btn = UIButton(type: .detailDisclosure) as UIView
                 let img = UIImageView(image: annotation.image) as UIView
                 img.frame = CGRect(x:0, y:0, width: 50, height: 50)
                 view.leftCalloutAccessoryView = img
@@ -38,11 +38,18 @@ extension FirstViewController: MKMapViewDelegate{
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
-        let location = view.annotation as! EventAnnotation
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        location.mapItem().openInMaps(launchOptions: launchOptions)
+        let annotation = view.annotation as! EventAnnotation
+        self.id = annotation.id
+        self.performSegue(withIdentifier: "ShowEventFromMap", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEventFromMap" {
+            if let destinationVC = segue.destination as? ActivityViewController {
+                destinationVC.idActualEvent = self.id
+            }
+        }
+    }
     
     
 }
