@@ -16,18 +16,18 @@ class EventUnit: NSObject {
     let id: String
     let locationName: String
     let motivation: String
-    //var timeUntil: Double
+    let date: String
     let coordinate: CLLocationCoordinate2D
     let imageTitle: String
     var peopleEngaged: Int
     
-    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, coordinate: CLLocationCoordinate2D, imageTitle: String){
+    init(eventTitle: String, eventCreator: String, id: String, locationName: String, motivation: String, date: String, coordinate: CLLocationCoordinate2D, imageTitle: String){
         self.eventTitle = eventTitle
         self.eventCreator = eventCreator
         self.id = id
         self.locationName = locationName
         self.motivation = motivation
-        //self.timeUntil = timeUntil
+        self.date = date
         self.coordinate = coordinate
         self.imageTitle = imageTitle
         peopleEngaged = 1

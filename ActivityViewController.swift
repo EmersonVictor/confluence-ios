@@ -11,7 +11,7 @@ import MapKit
 
 class ActivityViewController: UIViewController {
 
-    var event:EventUnit = EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "profile-header.png")
+    var event:EventUnit = EventUnit(eventTitle: "Evento1", eventCreator: "1", id: "1", locationName: "Casa da Mãe Joana", motivation: "Queremos saber o que é Caviar", date: "10-28-1995 20:00", coordinate: CLLocationCoordinate2D(latitude: -8.055668, longitude: -34.951578), imageTitle: "profile-header.png")
     
     @IBOutlet weak var btnEngage: UIButton!
     
