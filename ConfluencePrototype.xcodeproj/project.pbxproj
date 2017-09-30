@@ -43,7 +43,6 @@
 		A4E9CCFF1F7EF48F00D70DD8 /* profile-header.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF01F7EF48F00D70DD8 /* profile-header.png */; };
 		A4E9CD001F7EF48F00D70DD8 /* profile-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF11F7EF48F00D70DD8 /* profile-picture.png */; };
 		A4E9CD011F7EF48F00D70DD8 /* tab-discover.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF21F7EF48F00D70DD8 /* tab-discover.png */; };
-		A4E9CD021F7EF48F00D70DD8 /* tab-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF31F7EF48F00D70DD8 /* tab-profile.png */; };
 		A4E9CD031F7EF48F00D70DD8 /* tab-signpost.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF41F7EF48F00D70DD8 /* tab-signpost.png */; };
 		A4E9CD041F7EF48F00D70DD8 /* tutorial-bg-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF51F7EF48F00D70DD8 /* tutorial-bg-1.jpg */; };
 		A4E9CD051F7EF48F00D70DD8 /* tutorial-bg-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9CCF61F7EF48F00D70DD8 /* tutorial-bg-2.jpg */; };
@@ -55,7 +54,8 @@
 		A4ECC4F91F7FF246006A8383 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC4F81F7FF246006A8383 /* CreateEventViewController.swift */; };
 		A4ECC4FB1F8029D0006A8383 /* button-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC4FA1F8029D0006A8383 /* button-add.png */; };
 		A4ECC4FD1F802ADC006A8383 /* myactivities.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC4FC1F802ADC006A8383 /* myactivities.png */; };
-		A4ECC4FF1F802B26006A8383 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC4FE1F802B26006A8383 /* search.png */; };
+		A4ECC5051F802F04006A8383 /* tab-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5041F802F04006A8383 /* tab-profile.png */; };
+		A4ECC5071F802F98006A8383 /* button-search.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5061F802F98006A8383 /* button-search.png */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +123,6 @@
 		A4E9CCF01F7EF48F00D70DD8 /* profile-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile-header.png"; path = "Assets/profile-header.png"; sourceTree = "<group>"; };
 		A4E9CCF11F7EF48F00D70DD8 /* profile-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile-picture.png"; path = "Assets/profile-picture.png"; sourceTree = "<group>"; };
 		A4E9CCF21F7EF48F00D70DD8 /* tab-discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-discover.png"; path = "Assets/tab-discover.png"; sourceTree = "<group>"; };
-		A4E9CCF31F7EF48F00D70DD8 /* tab-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-profile.png"; path = "Assets/tab-profile.png"; sourceTree = "<group>"; };
 		A4E9CCF41F7EF48F00D70DD8 /* tab-signpost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-signpost.png"; path = "Assets/tab-signpost.png"; sourceTree = "<group>"; };
 		A4E9CCF51F7EF48F00D70DD8 /* tutorial-bg-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "tutorial-bg-1.jpg"; path = "Assets/tutorial-bg-1.jpg"; sourceTree = "<group>"; };
 		A4E9CCF61F7EF48F00D70DD8 /* tutorial-bg-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "tutorial-bg-2.jpg"; path = "Assets/tutorial-bg-2.jpg"; sourceTree = "<group>"; };
@@ -135,7 +134,8 @@
 		A4ECC4F81F7FF246006A8383 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		A4ECC4FA1F8029D0006A8383 /* button-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-add.png"; path = "Assets/button-add.png"; sourceTree = SOURCE_ROOT; };
 		A4ECC4FC1F802ADC006A8383 /* myactivities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myactivities.png; path = Assets/myactivities.png; sourceTree = "<group>"; };
-		A4ECC4FE1F802B26006A8383 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = Assets/search.png; sourceTree = "<group>"; };
+		A4ECC5041F802F04006A8383 /* tab-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-profile.png"; path = "../../Downloads/tab-profile.png"; sourceTree = "<group>"; };
+		A4ECC5061F802F98006A8383 /* button-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-search.png"; path = "../../Downloads/button-search.png"; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,7 +214,6 @@
 				A47F82E21F796397004AC67A /* VCMapView.swift */,
 				A467B6801F7D7C6200B2B969 /* SearchViewController.swift */,
 				A47F82D61F758914004AC67A /* ActivityViewController.swift */,
-				A4ECC4FA1F8029D0006A8383 /* button-add.png */,
 				A467B67C1F7D796500B2B969 /* MyActivitiesViewController.swift */,
 				A467B67E1F7D79B100B2B969 /* EngagedActivitiesView.swift */,
 				A4ECC4F61F7FEE09006A8383 /* MyActivitiesTableViewCell.swift */,
@@ -260,6 +259,8 @@
 		A4E9CCE71F7EECBA00D70DD8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECC4FA1F8029D0006A8383 /* button-add.png */,
+				A4ECC5061F802F98006A8383 /* button-search.png */,
 				A4E9CCEA1F7EF48F00D70DD8 /* engage.png */,
 				A4E9CCEB1F7EF48F00D70DD8 /* footsteps-blue.png */,
 				A4E9CCEC1F7EF48F00D70DD8 /* footsteps-green.png */,
@@ -270,10 +271,9 @@
 				A4E9CCF01F7EF48F00D70DD8 /* profile-header.png */,
 				A4E9CCF11F7EF48F00D70DD8 /* profile-picture.png */,
 				A4E9CCF21F7EF48F00D70DD8 /* tab-discover.png */,
-				A4E9CCF31F7EF48F00D70DD8 /* tab-profile.png */,
 				A4E9CCF41F7EF48F00D70DD8 /* tab-signpost.png */,
 				A4E9CCF51F7EF48F00D70DD8 /* tutorial-bg-1.jpg */,
-				A4ECC4FE1F802B26006A8383 /* search.png */,
+				A4ECC5041F802F04006A8383 /* tab-profile.png */,
 				A4E9CCF61F7EF48F00D70DD8 /* tutorial-bg-2.jpg */,
 				A4E9CCF71F7EF48F00D70DD8 /* tutorial-bg-3.png */,
 				A4E9CCF81F7EF48F00D70DD8 /* tutorial-bg-4.jpg */,
@@ -423,10 +423,11 @@
 				A4E9CD001F7EF48F00D70DD8 /* profile-picture.png in Resources */,
 				A4E9CD051F7EF48F00D70DD8 /* tutorial-bg-2.jpg in Resources */,
 				A4E942DD1F7EB46F004B5F26 /* GoogleService-Info.plist in Resources */,
-				A4ECC4FF1F802B26006A8383 /* search.png in Resources */,
 				A4E9CCFD1F7EF48F00D70DD8 /* footsteps-yellow.png in Resources */,
 				A4ECC4FD1F802ADC006A8383 /* myactivities.png in Resources */,
+				A4ECC5051F802F04006A8383 /* tab-profile.png in Resources */,
 				A4E9CD061F7EF48F00D70DD8 /* tutorial-bg-3.png in Resources */,
+				A4ECC5071F802F98006A8383 /* button-search.png in Resources */,
 				A4E9CCFE1F7EF48F00D70DD8 /* next.png in Resources */,
 				A4E9CD041F7EF48F00D70DD8 /* tutorial-bg-1.jpg in Resources */,
 				A4DFA5761F7054DC0077BF82 /* Assets.xcassets in Resources */,
@@ -437,7 +438,6 @@
 				A4E9CD071F7EF48F00D70DD8 /* tutorial-bg-4.jpg in Resources */,
 				A4E9CCFB1F7EF48F00D70DD8 /* footsteps-green.png in Resources */,
 				A4E9CD031F7EF48F00D70DD8 /* tab-signpost.png in Resources */,
-				A4E9CD021F7EF48F00D70DD8 /* tab-profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
