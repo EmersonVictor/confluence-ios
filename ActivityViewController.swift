@@ -18,6 +18,7 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var eventPhoto: UIImageView!
     
     @IBAction func dismissView(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     

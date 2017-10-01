@@ -26,6 +26,7 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -40,6 +41,11 @@ class engagedActivitiesView: UIViewController, UITableViewDataSource, UITableVie
         self.tableContent.preservesSuperviewLayoutMargins = false
         self.tableContent.separatorInset = UIEdgeInsets.zero
         self.tableContent.layoutMargins = UIEdgeInsets.zero
+    }
+    
+    func loadList() {
+        engagedActivitiesData = Manager.sharedInstance.usuario.eventEngaged.sortAllByDistance(myLocation: locationManager.location!)
+        self.tableContent.reloadData();
     }
 
     override func didReceiveMemoryWarning() {
