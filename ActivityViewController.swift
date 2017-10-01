@@ -15,6 +15,7 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var btnEngage: UIButton!
     
+    @IBOutlet weak var btnGoThere: UIButton!
     @IBOutlet weak var eventPhoto: UIImageView!
     
     @IBAction func dismissView(_ sender: Any) {
@@ -71,6 +72,12 @@ class ActivityViewController: UIViewController {
         eventPhoto.clipsToBounds = true
     }
 
+    @IBAction func goThere(_ sender: Any) {
+        let location = EventAnnotation(event: event)
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMaps(launchOptions: launchOptions)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

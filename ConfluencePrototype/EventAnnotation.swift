@@ -15,7 +15,6 @@ class EventAnnotation: NSObject, MKAnnotation {
     let title: String?
     let id: String
     let locationName: String
-    //var timeUntil: Double
     let coordinate: CLLocationCoordinate2D
     let image: UIImage
     
@@ -23,9 +22,17 @@ class EventAnnotation: NSObject, MKAnnotation {
         self.title = title
         self.id = id
         self.locationName = locationName
-        //self.timeUntil = timeUntil
         self.coordinate = coordinate
         self.image = image
+        super.init()
+    }
+    
+    init(event: EventUnit){
+        self.title = event.eventTitle
+        self.id = event.id
+        self.locationName = event.locationName
+        self.coordinate = event.coordinate
+        self.image = event.image
         super.init()
     }
     

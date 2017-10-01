@@ -234,6 +234,9 @@
                                 <state key="normal" title="Go there">
                                     <color key="titleColor" red="0.14452928300000001" green="0.63618171219999997" blue="0.65050631759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goThere:" destination="9U3-e2-ytq" eventType="touchUpInside" id="2To-QQ-Rqs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MOTIVATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3od-IS-E1u">
                                 <rect key="frame" x="43" y="523" width="122" height="28"/>
@@ -255,6 +258,7 @@
                     <connections>
                         <outlet property="address" destination="Mye-v1-YOS" id="g1E-Xz-9VZ"/>
                         <outlet property="btnEngage" destination="MVo-yj-y0U" id="g1D-Oe-67H"/>
+                        <outlet property="btnGoThere" destination="09S-YY-EIf" id="67r-bl-A5Q"/>
                         <outlet property="creatorName" destination="ioy-T4-ODd" id="VNa-AD-ASx"/>
                         <outlet property="days" destination="XC5-Bs-AgA" id="WVo-Ux-e0Z"/>
                         <outlet property="engagedNumber" destination="L08-qd-PgT" id="3Zd-9A-Ei0"/>
@@ -615,7 +619,7 @@
                                         <rect key="frame" x="0.0" y="280" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CID-Ye-8WU" id="IiR-Mp-ZLr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dja-tb-DAA">
@@ -676,7 +680,7 @@
                                         <rect key="frame" x="0.0" y="509" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g8r-LN-T1O" id="fq0-Pq-m0J">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="footsteps-pink.png" translatesAutoresizingMaskIntoConstraints="NO" id="ld2-UA-rA4">
