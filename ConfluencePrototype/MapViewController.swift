@@ -9,12 +9,16 @@
 import UIKit
 import MapKit
 
+protocol HandleMapSearch{
+    func moveMap(placemark:MKPlacemark)
+}
+
 class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     let regionRadius: CLLocationDistance = 1000
     var locationManager = CLLocationManager()
+    var resultSearchController: UISearchController? = nil
     var id:String = ""
     
     func checkLocationAuthorizationStatus(){
@@ -37,6 +41,24 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: - SearchBar
+        let mapSearchTable = storyboard!.instantiateViewController(withIdentifier: "MapTableViewController") as! MapTableViewController
+        resultSearchController = UISearchController(searchResultsController: mapSearchTable)
+        resultSearchController?.searchResultsUpdater = mapSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        
+        mapSearchTable.mapView = mapView
+        mapSearchTable.handleMapSearchDelegate = self
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -44,18 +66,11 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
         
         centerMapOnLocation(location: locationManager.location!)
         mapView.delegate = self
-        searchBar.delegate = self
         
         for event in (Manager.sharedInstance.repositorio.eventItems){
             let eventAnnotation = EventAnnotation(title: event.eventTitle, id: event.id, locationName: event.locationName,
                                         coordinate: event.coordinate, image: event.image)
             mapView.addAnnotation(eventAnnotation)
-        }
-        
-        for subview in searchBar.subviews[0].subviews {
-            if subview is UIButton { //checking if it is a button
-                subview.tintColor = UIColor.black
-            }
         }
 
     }
@@ -65,22 +80,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
         // Dispose of any resources that can be recreated.
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if(searchBar.text! != ""){
-            let eventList = Manager.sharedInstance.repositorio.containsAndSortAlphabetically(searchTerm: searchBar.text!)
-        }
-            
-        searchBar.resignFirstResponder()
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse{
@@ -90,7 +89,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
-            print("location::(location)")
+            centerMapOnLocation(location: location)
         }
     }
     
@@ -98,7 +97,12 @@ class FirstViewController: UIViewController, UISearchBarDelegate, CLLocationMana
         print("error::(error)")
     }
     
-    
+}
 
+extension FirstViewController: HandleMapSearch{
+    func moveMap(placemark: MKPlacemark) {
+        let location = CLLocation(latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude)
+        centerMapOnLocation(location: location)
+    }
 }
 

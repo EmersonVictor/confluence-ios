@@ -59,6 +59,7 @@
 		A4ECC5091F81270E006A8383 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5081F81270E006A8383 /* blank.png */; };
 		A4ECC50B1F812BB5006A8383 /* activity-location.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50A1F812BB5006A8383 /* activity-location.png */; };
 		A4ECC50D1F813239006A8383 /* activity-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50C1F813239006A8383 /* activity-picture.png */; };
+		A4ECC50F1F815EF8006A8383 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC50E1F815EF8006A8383 /* MapTableViewController.swift */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,7 @@
 		A4ECC5081F81270E006A8383 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = ../../Desktop/blank.png; sourceTree = "<group>"; };
 		A4ECC50A1F812BB5006A8383 /* activity-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-location.png"; path = "../../Downloads/activity-location.png"; sourceTree = "<group>"; };
 		A4ECC50C1F813239006A8383 /* activity-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-picture.png"; path = "../../Downloads/activity-picture.png"; sourceTree = "<group>"; };
+		A4ECC50E1F815EF8006A8383 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				A4E942DE1F7EC8BA004B5F26 /* LocationSearchTable.swift */,
 				A4DFA5701F7054DC0077BF82 /* ProfileViewController.swift */,
 				A4DFA5721F7054DC0077BF82 /* Main.storyboard */,
+				A4ECC50E1F815EF8006A8383 /* MapTableViewController.swift */,
 				A4ECC4F81F7FF246006A8383 /* CreateEventViewController.swift */,
 				A467B66E1F7C259A00B2B969 /* JourneyViewController.swift */,
 				A467B6601F7BFCAA00B2B969 /* RegisterViewController.swift */,
@@ -635,6 +638,7 @@
 				A47F82DF1F796011004AC67A /* EventAnnotation.swift in Sources */,
 				A4E942DF1F7EC8BA004B5F26 /* LocationSearchTable.swift in Sources */,
 				A47F82E31F796397004AC67A /* VCMapView.swift in Sources */,
+				A4ECC50F1F815EF8006A8383 /* MapTableViewController.swift in Sources */,
 				A467B6631F7C013200B2B969 /* User.swift in Sources */,
 				A4DFA5711F7054DC0077BF82 /* ProfileViewController.swift in Sources */,
 				A4ECC4F91F7FF246006A8383 /* CreateEventViewController.swift in Sources */,
