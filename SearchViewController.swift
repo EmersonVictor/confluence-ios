@@ -65,6 +65,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
         searchBar.showsCancelButton = true
+        searchBar.searchBarStyle = UISearchBarStyle.minimal
+        searchBar.scopeBarBackgroundImage =  UIImage(named: "blank.png")
         self.tableView.tableHeaderView = searchBar
     }
     

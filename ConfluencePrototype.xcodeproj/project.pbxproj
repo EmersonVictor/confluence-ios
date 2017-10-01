@@ -56,6 +56,7 @@
 		A4ECC4FD1F802ADC006A8383 /* myactivities.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC4FC1F802ADC006A8383 /* myactivities.png */; };
 		A4ECC5051F802F04006A8383 /* tab-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5041F802F04006A8383 /* tab-profile.png */; };
 		A4ECC5071F802F98006A8383 /* button-search.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5061F802F98006A8383 /* button-search.png */; };
+		A4ECC5091F81270E006A8383 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5081F81270E006A8383 /* blank.png */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		A4ECC4FC1F802ADC006A8383 /* myactivities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myactivities.png; path = Assets/myactivities.png; sourceTree = "<group>"; };
 		A4ECC5041F802F04006A8383 /* tab-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-profile.png"; path = "../../Downloads/tab-profile.png"; sourceTree = "<group>"; };
 		A4ECC5061F802F98006A8383 /* button-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-search.png"; path = "../../Downloads/button-search.png"; sourceTree = "<group>"; };
+		A4ECC5081F81270E006A8383 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = ../../Desktop/blank.png; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				A4E9CCF61F7EF48F00D70DD8 /* tutorial-bg-2.jpg */,
 				A4E9CCF71F7EF48F00D70DD8 /* tutorial-bg-3.png */,
 				A4E9CCF81F7EF48F00D70DD8 /* tutorial-bg-4.jpg */,
+				A4ECC5081F81270E006A8383 /* blank.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				A4ECC5071F802F98006A8383 /* button-search.png in Resources */,
 				A4E9CCFE1F7EF48F00D70DD8 /* next.png in Resources */,
 				A4E9CD041F7EF48F00D70DD8 /* tutorial-bg-1.jpg in Resources */,
+				A4ECC5091F81270E006A8383 /* blank.png in Resources */,
 				A4DFA5761F7054DC0077BF82 /* Assets.xcassets in Resources */,
 				A4E9CD011F7EF48F00D70DD8 /* tab-discover.png in Resources */,
 				A4DFA5741F7054DC0077BF82 /* Main.storyboard in Resources */,
