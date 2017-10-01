@@ -32,6 +32,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             if let nav = barViewControllers.viewControllers?[0] as! SecondViewController? {
                 nav.nameInputProfile = nounTextField.text!
             }
+            
         }
     }
 

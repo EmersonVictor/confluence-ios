@@ -57,6 +57,8 @@
 		A4ECC5051F802F04006A8383 /* tab-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5041F802F04006A8383 /* tab-profile.png */; };
 		A4ECC5071F802F98006A8383 /* button-search.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5061F802F98006A8383 /* button-search.png */; };
 		A4ECC5091F81270E006A8383 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC5081F81270E006A8383 /* blank.png */; };
+		A4ECC50B1F812BB5006A8383 /* activity-location.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50A1F812BB5006A8383 /* activity-location.png */; };
+		A4ECC50D1F813239006A8383 /* activity-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50C1F813239006A8383 /* activity-picture.png */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +140,8 @@
 		A4ECC5041F802F04006A8383 /* tab-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab-profile.png"; path = "../../Downloads/tab-profile.png"; sourceTree = "<group>"; };
 		A4ECC5061F802F98006A8383 /* button-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-search.png"; path = "../../Downloads/button-search.png"; sourceTree = "<group>"; };
 		A4ECC5081F81270E006A8383 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = ../../Desktop/blank.png; sourceTree = "<group>"; };
+		A4ECC50A1F812BB5006A8383 /* activity-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-location.png"; path = "../../Downloads/activity-location.png"; sourceTree = "<group>"; };
+		A4ECC50C1F813239006A8383 /* activity-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-picture.png"; path = "../../Downloads/activity-picture.png"; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 		A4E9CCE71F7EECBA00D70DD8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECC50C1F813239006A8383 /* activity-picture.png */,
 				A4ECC4FA1F8029D0006A8383 /* button-add.png */,
 				A4ECC5061F802F98006A8383 /* button-search.png */,
 				A4E9CCEA1F7EF48F00D70DD8 /* engage.png */,
@@ -270,6 +275,7 @@
 				A4E9CCEE1F7EF48F00D70DD8 /* footsteps-yellow.png */,
 				A4ECC4FC1F802ADC006A8383 /* myactivities.png */,
 				A4E9CCEF1F7EF48F00D70DD8 /* next.png */,
+				A4ECC50A1F812BB5006A8383 /* activity-location.png */,
 				A4E9CCF01F7EF48F00D70DD8 /* profile-header.png */,
 				A4E9CCF11F7EF48F00D70DD8 /* profile-picture.png */,
 				A4E9CCF21F7EF48F00D70DD8 /* tab-discover.png */,
@@ -422,12 +428,14 @@
 				A4DFA5791F7054DD0077BF82 /* LaunchScreen.storyboard in Resources */,
 				A4E9CCFA1F7EF48F00D70DD8 /* footsteps-blue.png in Resources */,
 				A4E9CCF91F7EF48F00D70DD8 /* engage.png in Resources */,
+				A4ECC50B1F812BB5006A8383 /* activity-location.png in Resources */,
 				A4E9CCFC1F7EF48F00D70DD8 /* footsteps-pink.png in Resources */,
 				A4E9CD001F7EF48F00D70DD8 /* profile-picture.png in Resources */,
 				A4E9CD051F7EF48F00D70DD8 /* tutorial-bg-2.jpg in Resources */,
 				A4E942DD1F7EB46F004B5F26 /* GoogleService-Info.plist in Resources */,
 				A4E9CCFD1F7EF48F00D70DD8 /* footsteps-yellow.png in Resources */,
 				A4ECC4FD1F802ADC006A8383 /* myactivities.png in Resources */,
+				A4ECC50D1F813239006A8383 /* activity-picture.png in Resources */,
 				A4ECC5051F802F04006A8383 /* tab-profile.png in Resources */,
 				A4E9CD061F7EF48F00D70DD8 /* tutorial-bg-3.png in Resources */,
 				A4ECC5071F802F98006A8383 /* button-search.png in Resources */,

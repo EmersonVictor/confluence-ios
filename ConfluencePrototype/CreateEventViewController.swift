@@ -106,7 +106,7 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         let motivation = eventMotivation.text!
         let address = eventAddress.text!
         let date = eventDate.text!
-        let eventCreator = Manager.sharedInstance.usuario.id
+        let eventCreator = Manager.sharedInstance.usuario.username
         let id = Manager.sharedInstance.repositorio.contador
         let image = eventImage.image
         var coordinate = CLLocationCoordinate2D()
