@@ -66,7 +66,8 @@ class myActivitiesView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.white
         let event = myEventsData[indexPath.row]
         idTarget = event.id
         self.performSegue(withIdentifier: "SelectedEventInMyActivity", sender: self)

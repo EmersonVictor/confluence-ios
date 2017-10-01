@@ -131,7 +131,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.white
         let event = listEvents[indexPath.row]
         idTarget = event.id
         self.performSegue(withIdentifier: "SelectedEventInSearch", sender: self)
