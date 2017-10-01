@@ -46,7 +46,11 @@ class JourneyTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         } else {
             return 140
         }
-        
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.white
     }
 
     /*
