@@ -11,8 +11,10 @@ import MapKit
 
 class Manager: NSObject{
     static let sharedInstance = Manager()
+    
     var usuario:User
     var repositorio:Repository
+    var contador = 0
     
     private override init(){
         usuario = User(id: "1", username: "Jorge", profileImage: "dog-1224267_1920.jpg")

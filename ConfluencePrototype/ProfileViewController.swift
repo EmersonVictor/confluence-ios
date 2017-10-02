@@ -23,6 +23,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         profileName.text = nameInputProfile
+        Manager.sharedInstance.usuario.username = nameInputProfile
         self.myTable.delegate = self
         self.myTable.dataSource = self
         
@@ -59,6 +60,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let firstTextField = alertController.textFields![0] as UITextField
             if firstTextField.text != "" {
                 self.profileName.text = firstTextField.text
+                Manager.sharedInstance.usuario.username = firstTextField.text!
             }
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
@@ -68,8 +70,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter name"
         }
-        alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
         self.present(alertController, animated: true, completion: nil)
     }
     

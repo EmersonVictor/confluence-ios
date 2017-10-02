@@ -23,6 +23,7 @@
 		A47F82E71F798033004AC67A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F82E61F798033004AC67A /* Repository.swift */; };
 		A47F82EC1F798272004AC67A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47F82EB1F798272004AC67A /* MapKit.framework */; };
 		A47F82F21F799495004AC67A /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F82F11F799495004AC67A /* TutorialPageViewController.swift */; };
+		A4CC8EDB1F8172D7007C7E11 /* SetAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC8EDA1F8172D7007C7E11 /* SetAddressTableViewController.swift */; };
 		A4DFA56D1F7054DC0077BF82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFA56C1F7054DC0077BF82 /* AppDelegate.swift */; };
 		A4DFA56F1F7054DC0077BF82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFA56E1F7054DC0077BF82 /* MapViewController.swift */; };
 		A4DFA5711F7054DC0077BF82 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DFA5701F7054DC0077BF82 /* ProfileViewController.swift */; };
@@ -60,6 +61,7 @@
 		A4ECC50B1F812BB5006A8383 /* activity-location.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50A1F812BB5006A8383 /* activity-location.png */; };
 		A4ECC50D1F813239006A8383 /* activity-picture.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECC50C1F813239006A8383 /* activity-picture.png */; };
 		A4ECC50F1F815EF8006A8383 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC50E1F815EF8006A8383 /* MapTableViewController.swift */; };
+		A4ECC5131F816BA7006A8383 /* ConfigAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ECC5121F816BA7006A8383 /* ConfigAddressViewController.swift */; };
 		AAF1C6B03ACED1C76CC4B9EC /* Pods_ConfluencePrototypeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8C8E5F1B292D70D5FB6D8E /* Pods_ConfluencePrototypeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,7 @@
 		A47F82E61F798033004AC67A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A47F82EB1F798272004AC67A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A47F82F11F799495004AC67A /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		A4CC8EDA1F8172D7007C7E11 /* SetAddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAddressTableViewController.swift; sourceTree = "<group>"; };
 		A4DFA5691F7054DC0077BF82 /* ConfluencePrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfluencePrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DFA56C1F7054DC0077BF82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4DFA56E1F7054DC0077BF82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		A4ECC50A1F812BB5006A8383 /* activity-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-location.png"; path = "../../Downloads/activity-location.png"; sourceTree = "<group>"; };
 		A4ECC50C1F813239006A8383 /* activity-picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "activity-picture.png"; path = "../../Downloads/activity-picture.png"; sourceTree = "<group>"; };
 		A4ECC50E1F815EF8006A8383 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
+		A4ECC5121F816BA7006A8383 /* ConfigAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigAddressViewController.swift; sourceTree = "<group>"; };
 		B79E2161A525855A44853089 /* Pods-ConfluencePrototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototype/Pods-ConfluencePrototype.release.xcconfig"; sourceTree = "<group>"; };
 		CAD9D05FE5C5BB1048DDE737 /* Pods-ConfluencePrototypeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeUITests/Pods-ConfluencePrototypeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E9BC9AF6C1337E99173BFE /* Pods-ConfluencePrototypeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfluencePrototypeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfluencePrototypeTests/Pods-ConfluencePrototypeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,8 +229,10 @@
 				A467B67C1F7D796500B2B969 /* MyActivitiesViewController.swift */,
 				A467B67E1F7D79B100B2B969 /* EngagedActivitiesView.swift */,
 				A4ECC4F61F7FEE09006A8383 /* MyActivitiesTableViewCell.swift */,
+				A4CC8EDA1F8172D7007C7E11 /* SetAddressTableViewController.swift */,
 				A4DFA56C1F7054DC0077BF82 /* AppDelegate.swift */,
 				A4DFA56E1F7054DC0077BF82 /* MapViewController.swift */,
+				A4ECC5121F816BA7006A8383 /* ConfigAddressViewController.swift */,
 				A4E942DE1F7EC8BA004B5F26 /* LocationSearchTable.swift */,
 				A4DFA5701F7054DC0077BF82 /* ProfileViewController.swift */,
 				A4DFA5721F7054DC0077BF82 /* Main.storyboard */,
@@ -646,9 +652,11 @@
 				A467B6611F7BFCAA00B2B969 /* RegisterViewController.swift in Sources */,
 				A467B67D1F7D796500B2B969 /* MyActivitiesViewController.swift in Sources */,
 				A4DFA56D1F7054DC0077BF82 /* AppDelegate.swift in Sources */,
+				A4ECC5131F816BA7006A8383 /* ConfigAddressViewController.swift in Sources */,
 				A4ECC4F31F7FCB5D006A8383 /* TabBarController.swift in Sources */,
 				A4DFA56F1F7054DC0077BF82 /* MapViewController.swift in Sources */,
 				A47F82D71F758914004AC67A /* ActivityViewController.swift in Sources */,
+				A4CC8EDB1F8172D7007C7E11 /* SetAddressTableViewController.swift in Sources */,
 				A467B6811F7D7C6200B2B969 /* SearchViewController.swift in Sources */,
 				A47F82F21F799495004AC67A /* TutorialPageViewController.swift in Sources */,
 				A47F82E51F797D61004AC67A /* EventUnit.swift in Sources */,

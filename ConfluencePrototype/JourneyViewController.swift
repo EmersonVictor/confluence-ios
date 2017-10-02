@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class JourneyTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var journeyMenu: UITableView!

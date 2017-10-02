@@ -1,19 +1,19 @@
 //
-//  MapTableViewController.swift
-//  ConfluencePrototype
+//  SetAddressTableViewController.swift
+//  
 //
 //  Created by Gabriel D'Luca Souza Viana on 01/10/17.
-//  Copyright © 2017 Gabriel D'Luca Souza Viana. All rights reserved.
+//
 //
 
 import UIKit
 import MapKit
 
-class MapTableViewController: UITableViewController {
+class SetAddressTableViewController: UITableViewController {
     
     var matchingItems : [MKMapItem] = []
     var mapView: MKMapView? = nil
-    var handleMapSearchDelegate:HandleMapSearch? = nil
+    var addressMapSearchDelegate:AddressMapSearch? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,7 @@ class MapTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -42,7 +43,7 @@ class MapTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "addressCell")!
         let selectedItem = matchingItems[indexPath.row].placemark
         cell.textLabel?.text = selectedItem.name
         cell.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
@@ -51,7 +52,7 @@ class MapTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = matchingItems[indexPath.row].placemark
-        handleMapSearchDelegate?.moveMap(placemark: selectedItem)
+        addressMapSearchDelegate?.ops(placemark: selectedItem)
         dismiss(animated: true, completion: nil)
     }
     
@@ -81,7 +82,7 @@ class MapTableViewController: UITableViewController {
 
 }
 
-extension MapTableViewController: UISearchResultsUpdating {
+extension SetAddressTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let mapView = mapView, let searchBarText = searchController.searchBar.text else { return }
         let request = MKLocalSearchRequest()

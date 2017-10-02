@@ -9,6 +9,10 @@
 import UIKit
 import MapKit
 
+/*protocol UpdateAddress{
+    func update(address:String, coordinate: CLLocationCoordinate2D)
+}*/
+
 class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
@@ -18,13 +22,15 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var eventAddress: UITextField!
     @IBOutlet weak var eventMotivation: UITextView!
     @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventChangeImage: UIButton!
-    
+    @IBOutlet weak var setAddress: UIButton!
+    var address: String = ""
+    var coordinate = CLLocationCoordinate2D()
+
     @IBAction func changeImage(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -50,7 +56,6 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.eventAddress.delegate = self
         self.eventMotivation.delegate = self
         self.eventName.delegate = self
         self.eventMotivation.delegate = self
@@ -98,29 +103,15 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         let strDate = dateFormatter.string(from: datePicker.date)
         self.eventDate.text = strDate
     }
-
    
     @IBAction func createEvent(_ sender: Any) {
         //let image = eventImage.image
         let name = eventName.text!
         let motivation = eventMotivation.text!
-        let address = eventAddress.text!
         let date = eventDate.text!
         let eventCreator = Manager.sharedInstance.usuario.username
         let id = Manager.sharedInstance.repositorio.contador
         let image = eventImage.image
-        var coordinate = CLLocationCoordinate2D()
-        
-        CLGeocoder().geocodeAddressString(address, completionHandler: {(placemarks, error) in
-            if(error != nil){
-                print("Geocode Failed!")
-            }else{
-                let placemark = placemarks![0]
-                let location = placemark.location
-                coordinate = location!.coordinate
-            }
-        })
-        print(coordinate)
         
         let newEvent = EventUnit(eventTitle: name, eventCreator: eventCreator, id: String(id), locationName: address, motivation: motivation, date: date, coordinate: coordinate, image: image!)
         Manager.sharedInstance.repositorio.registerEvent(event: newEvent)
@@ -130,9 +121,22 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    @IBAction func UpdateAddress(_ sender: Any) {
+        if(Manager.sharedInstance.contador == 0){
+            Manager.sharedInstance.contador = 1
+            
+            address = "Universidade Federal de Pernambuco"
+            coordinate = CLLocationCoordinate2D(latitude: -8.051460, longitude: -34.948876)
+        }else if(Manager.sharedInstance.contador == 1){
+            Manager.sharedInstance.contador = 2
+            address = "CAC - Centro de Artes e ComunicaçãoCTG"
+            coordinate = CLLocationCoordinate2D(latitude: -8.050714, longitude: -34.953791)
+        }else{
+            address = "UFPE - CTG (Centro de Tecnologia e Geociências)"
+            coordinate = CLLocationCoordinate2D(latitude: -8.053812, longitude: -34.954644)
+        }
+    }
     
-    
- 
     /*
     // MARK: - Navigation
 
@@ -144,3 +148,10 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
     */
 
 }
+/*
+extension CreateEventViewController: UpdateAddress{
+    func update(address:String, coordinate: CLLocationCoordinate2D){
+        eventAddress.text = address
+        self.coordinate = coordinate
+    }
+}*/

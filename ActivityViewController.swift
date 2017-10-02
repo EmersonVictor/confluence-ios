@@ -17,6 +17,7 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var btnGoThere: UIButton!
     @IBOutlet weak var eventPhoto: UIImageView!
+    @IBOutlet weak var activityDate: UILabel!
     
     @IBAction func dismissView(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
@@ -57,9 +58,10 @@ class ActivityViewController: UIViewController {
             address.text = event.locationName
             eventPhoto.image = event.image
             engagedNumber.text = String(event.peopleEngaged)
+            activityDate.text = event.date
         }
         
-        if (userName == event.eventCreator) {
+        if (Manager.sharedInstance.usuario.eventCreated.eventExists(event.id)) {
             btnEngage.isEnabled = false
             btnEngage.isHidden = true
         } else if (Manager.sharedInstance.usuario.eventEngaged.eventExists(event.id)){
