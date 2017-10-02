@@ -42,8 +42,10 @@ class JourneyTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 140
-        } else if indexPath.row % 2 == 1 {
-            return 90.0
+        } else if indexPath.row == 1 {
+            return 70.0
+        } else if indexPath.row == 3 {
+            return 30
         } else {
             return 140
         }

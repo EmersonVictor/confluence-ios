@@ -116,17 +116,16 @@ class CreateEventViewController: UIViewController, UITextFieldDelegate, UITextVi
         let newEvent = EventUnit(eventTitle: name, eventCreator: eventCreator, id: String(id), locationName: address, motivation: motivation, date: date, coordinate: coordinate, image: image!)
         Manager.sharedInstance.repositorio.registerEvent(event: newEvent)
         Manager.sharedInstance.usuario.eventCreated.registerEvent(event: newEvent)
-        
-        let alert = UIAlertController(title: "The activity has been created .", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+
+        self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func UpdateAddress(_ sender: Any) {
         if(Manager.sharedInstance.contador == 0){
             Manager.sharedInstance.contador = 1
             
-            address = "Universidade Federal de Pernambuco"
-            coordinate = CLLocationCoordinate2D(latitude: -8.051460, longitude: -34.948876)
+            address = "Avenida Beira Mar"
+            coordinate = CLLocationCoordinate2D(latitude: -8.165703, longitude: -34.913422)
         }else if(Manager.sharedInstance.contador == 1){
             Manager.sharedInstance.contador = 2
             address = "CAC - Centro de Artes e ComunicaçãoCTG"

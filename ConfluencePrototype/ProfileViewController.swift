@@ -15,8 +15,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var profileImage: UIImageView!
     var nameInputProfile = ""
     
-    let list = ["", "", "", ""]
-    let nomes = ["empty", "makeProfilePublic", "changeName", "changeImage"]
+    let list = ["", "", ""]
+    let nomes = ["empty", "changeName", "changeImage"]
     var start = true
     
     override func viewDidLoad() {
