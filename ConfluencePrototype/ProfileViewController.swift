@@ -22,7 +22,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        profileName.text = nameInputProfile
+        self.profileName.text = nameInputProfile
         Manager.sharedInstance.usuario.username = nameInputProfile
         self.myTable.delegate = self
         self.myTable.dataSource = self
